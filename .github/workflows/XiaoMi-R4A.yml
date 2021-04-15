@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: XiaoMi-R4A OpenWrt
+name: XiaoMi-R4A OpenWrt官方源码编译
 
 on:
   repository_dispatch:
