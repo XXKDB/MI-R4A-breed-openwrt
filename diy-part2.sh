@@ -36,6 +36,17 @@ rm -rf package/lean/luci-theme-netgear
 git clone https://github.com/YL2209/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
 git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
 
+# 修改luci-theme-argon_armygreen主题渐变色，16进制RGB
+#渐变色开始
+sed -i 's/#7f7fff/#5F9EA0/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+#渐变色结束
+sed -i 's/#7fffffb8/#7fbfffb8/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+sed -i 's/#9effff57/#7fbfff57/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+
+sed -i 's/#00FF00/#87CEEB/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+sed -i 's/#5e72e4/#87CEEB/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+sed -i 's/#4F2EDC/#87CEEB/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+
 #取消原主题luci-theme-bootstrap为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
