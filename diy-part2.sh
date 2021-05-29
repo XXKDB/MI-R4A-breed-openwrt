@@ -37,6 +37,9 @@ git clone https://github.com/YL2209/luci-theme-argon_armygreen.git package/lean/
 git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
 
 # 修改luci-theme-argon_armygreen主题渐变色，16进制RGB
+#登录页面背景颜色
+sed -i 's/#f7fafc/#f7fafccc/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+
 #渐变色开始
 sed -i 's/#7f7fff/#417994/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 #渐变色结束
