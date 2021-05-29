@@ -80,13 +80,13 @@ sed -i 's/#4fc352/#496A81/g' package/lean/luci-theme-argon_armygreen/htdocs/luci
 #复位 背景 - 边框 按钮样式的颜色
 #sed -i 's/#f0ad4e/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 #sed -i 's/#eea236/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
-#复位 背景 - 边框 按钮样式的颜色
+#删除 背景 - 边框 按钮样式的颜色
 #sed -i 's/#fb6340/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 
 #主机名右上角符号❤
 #sed -i 's/<a class="brand" href="#"><%=boardinfo.hostname or "?"%> ❤</a>/<a class="brand" href="#"><%=boardinfo.hostname or "?"%> ❤</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
 #登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
-#sed -i 's/<a href="https://github.com/openwrt/luci">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/<a href="https://github.com/openwrt/luci">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
+sed -i 's/<a href="https://github.com/openwrt/luci">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/<a href="https://jq.qq.com/?_wv=1027&k=s7GHUQ4e">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
 
 
 #已选中
