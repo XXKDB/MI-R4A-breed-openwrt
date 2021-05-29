@@ -82,6 +82,8 @@ sed -i 's/#9effff57/#9FC4D557/g' package/lean/luci-theme-argon_armygreen/htdocs/
 
 #主机名右上角符号❤
 #sed -i 's/<a class="brand" href="#"><%=boardinfo.hostname or "?"%> ❤</a>/<a class="brand" href="#"><%=boardinfo.hostname or "?"%> ❤</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
+#登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
+#sed -i 's/<a href="https://github.com/openwrt/luci">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/<a href="https://github.com/openwrt/luci">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
 
 
 #已选中
