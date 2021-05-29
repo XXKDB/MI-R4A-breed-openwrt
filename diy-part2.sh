@@ -34,7 +34,7 @@ rm -rf package/lean/luci-theme-ifit
 #下载主题luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/lean/luci-theme-infinityfreedom
-git clone https://github.com/YL2209/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
+git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
 git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
 
 # 修改luci-theme-argon_armygreen主题渐变色，16进制RGB
