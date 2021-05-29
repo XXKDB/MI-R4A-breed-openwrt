@@ -84,7 +84,7 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
-    - name: Install favicon.ico
+    - name: Update favicon.ico
       run: |
         mv favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico  
       
