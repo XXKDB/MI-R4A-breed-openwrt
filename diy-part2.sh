@@ -84,17 +84,20 @@ sed -i 's/#4fc352/#496A81/g' package/lean/luci-theme-argon_armygreen/htdocs/luci
 #删除 背景 - 边框 按钮样式的颜色
 #sed -i 's/#fb6340/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 
-#主机名右上角符号❤
-#sed -i 's/<a class="brand" href="#"><%=boardinfo.hostname or "?"%> ❤</a>/<a class="brand" href="#"><%=boardinfo.hostname or "?"%> ❤</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
-#登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
-sed -i 's/<a href="https://github.com/openwrt/luci">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/<a href="https://jq.qq.com/?_wv=1027&k=s7GHUQ4e">可爱动漫主题 <%= ver.luciname %> (<%= ver.luciversion %>)</a>/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
-
-
 #已选中
 sed -i 's/#4F2EDC/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 
 sed -i 's/#00FF00/#407994/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 sed -i 's/#5e72e4/#407994/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+
+#主机名右上角符号❤
+#sed -i 's/❤/❤/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
+#登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
+#sed -i 's/可爱动漫主题/可爱动漫主题/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
+sed -i 's/https://github.com/openwrt/luci/https://jq.qq.com/?_wv=1027&k=s7GHUQ4e/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
+
+
+
 
 #取消原主题luci-theme-bootstrap为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
