@@ -79,7 +79,7 @@ sed -i 's/#9effff57/#9FC4D557/g' package/lean/luci-theme-argon_armygreen/htdocs/
 #sed -i 's/#eea236/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 #复位 背景 - 边框 按钮样式的颜色
 #sed -i 's/#fb6340/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
-#sed -i 's/#fb6340/#E0DAD6/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+
 
 
 #已选中
