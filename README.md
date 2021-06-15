@@ -7,6 +7,7 @@
 感谢[ababwbq](https://www.right.com.cn/FORUM/forum.php?mod=viewthread&tid=4091589&extra=page%3D1%26filter%3Dtypeid%26typeid%3D55)提供的参考文章。
 
 小米4A千兆版breed直刷版
+
 2021-5-30  加入自动更新并编译。
 
 2021-6-15  更新mt7621.mk 和 mt7621_xiaomi_mir3g-v2.dts
