@@ -1,4 +1,4 @@
-# MI-R4A-breed-openwrt
+# MI-R4A-breed-openwrt and MI-MINI-Openwrt
 
 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的云编译项目
 
