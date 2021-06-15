@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-2.0-or-later OR MIT
-/dts-v1/;
 
 #include "mt7621.dtsi"
 
@@ -8,7 +7,7 @@
 
 / {
 	compatible = "xiaomi,mir3g-v2", "mediatek,mt7621-soc";
-	model = "星新课代表制作出品";
+	model = "新星课代表制作出品";
 
 	aliases {
 		led-boot = &led_status_yellow;
@@ -26,12 +25,12 @@
 		compatible = "gpio-leds";
 
 		led_status_blue: status_blue {
-			label = "mir3gv2:blue:status";
+			label = "blue:status";
 			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
 		};
 
 		led_status_yellow: status_yellow {
-			label = "mir3gv2:yellow:status";
+			label = "yellow:status";
 			gpios = <&gpio 10 GPIO_ACTIVE_LOW>;
 		};
 	};
