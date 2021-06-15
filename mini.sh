@@ -21,7 +21,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='XXKDB'' package
 #sed -i "s/OpenWrt /ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/OpenWrt /星新课代表/g" package/lean/default-settings/files/zzz-default-settings
 #更改主机型号，支持中文。 
-sed -i "s/Xiaomi MiWiFi Mini/星新课代表制作出品/g" target/linux/ramips/dts/mt7620a_xiaomi_miwifi-mini.dts
+#sed -i "s/Xiaomi MiWiFi Mini/星新课代表制作出品/g" target/linux/ramips/dts/mt7620a_xiaomi_miwifi-mini.dts
 
 #删除原默认主题
 rm -rf package/lean/luci-theme-argon
