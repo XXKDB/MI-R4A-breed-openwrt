@@ -89,7 +89,7 @@ jobs:
         mv mini/bg1.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg1.jpg
         mv mini/bg2.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg2.jpg
         mv mini/bg3.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg3.jpg
-        mv banner openwrt/package/base-files/files/etc/banner
+        mv mini/banner openwrt/package/base-files/files/etc/banner
         
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
