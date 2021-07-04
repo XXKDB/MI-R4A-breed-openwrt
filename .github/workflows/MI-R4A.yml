@@ -89,8 +89,8 @@ jobs:
         mv bg/bg1.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg1.jpg
         mv bg/bg2.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg2.jpg
         mv bg/bg3.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg3.jpg
-        mv bg/favicon.ico openwrt/package/kenzo/luci-theme-ifit/files/htdocs/favicon.ico
-        mv bg/logo.png openwrt/package/kenzo/luci-theme-ifit/files/htdocs/logo.png      
+        mv favicon.ico openwrt/package/kenzo/luci-theme-ifit/files/htdocs/favicon.ico
+        mv logo.png openwrt/package/kenzo/luci-theme-ifit/files/htdocs/logo.png      
         mv bg/main_bg.jpg openwrt/package/kenzo/luci-theme-ifit/files/htdocs/images/main_bg.jpg
         mv bg/main_bg_5k.jpg openwrt/package/kenzo/luci-theme-ifit/files/htdocs/images/main_bg_5k.jpg       
         mv banner openwrt/package/base-files/files/etc/banner
