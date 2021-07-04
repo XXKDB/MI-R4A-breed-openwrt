@@ -27,6 +27,8 @@ sed -i "s/OpenWrt /星新课代表/g" package/lean/default-settings/files/zzz-de
 #更改主机型号，支持中文。 
 sed -i "s/Xiaomi Mi Router 3G v2/星新课代表制作出品/g" target/linux/ramips/dts/mt7621_xiaomi_mir3g-v2.dts
 
+sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
+
 #删除原默认主题
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-theme-bootstrap
