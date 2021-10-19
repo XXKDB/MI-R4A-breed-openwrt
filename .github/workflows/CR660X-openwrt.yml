@@ -24,7 +24,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: MI-CR660x/feeds.conf.default
   CONFIG_FILE: MI-CR660x/CR660x.config
-  DIY_P1_SH: diy-part1.sh
+  DIY_P1_SH: MI-CR660x/diy-part1.sh
   DIY_P2_SH: MI-CR660x/CR660x.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
