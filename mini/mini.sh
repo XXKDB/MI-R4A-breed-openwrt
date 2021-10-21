@@ -12,7 +12,7 @@
 
 # Modify default IP
 # 修改openwrt登陆地址,把下面的192.168.31.1修改成你想要的就可以了
-sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把YOU-R4A修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='XXKDB'' package/lean/default-settings/files/zzz-default-settings
@@ -92,10 +92,10 @@ sed -i 's/#5e72e4/#331E4F/g' package/lean/luci-theme-argon_armygreen/htdocs/luci
 
 
 #登陆页面右下角技术支持  跳转网站“https://github.com/openwrt/luci”   名称“可爱动漫主题”
-sed -i 's/可爱动漫主题/暗主题/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
+#sed -i 's/可爱动漫主题/暗主题/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
 #sed -i 's#https://github.com/openwrt/luci#https://jq.qq.com/?_wv=1027&k=s7GHUQ4e#g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
 #主机名右上角符号❤
-sed -i 's/❤/👽/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
+#sed -i 's/❤/👽/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
 
 
 
@@ -110,7 +110,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon_armygreen/g' feeds/luci/collecti
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
-sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-flowoffload/po/zh-cn/flowoffload.po
+sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-turboacc/po/zh-cn/turboacc.po
 
 # 修改默认wifi名称ssid为XXKDB
 sed -i 's/ssid=OpenWrt/ssid=XXKDB/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
