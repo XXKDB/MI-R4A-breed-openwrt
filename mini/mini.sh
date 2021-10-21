@@ -23,6 +23,8 @@ sed -i "s/OpenWrt /ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 星新课代表 
 #更改主机型号，支持中文。 
 sed -i "s/Xiaomi MiWiFi Mini/星 新 课 代 表 制 作 出 品/g" target/linux/ramips/dts/mt7620a_xiaomi_miwifi-mini.dts
 
+sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
+
 #删除原默认主题
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-theme-bootstrap
