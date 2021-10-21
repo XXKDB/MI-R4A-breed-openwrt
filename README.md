@@ -1,5 +1,7 @@
 # MI-R4A-breed-openwrt and MI-MINI-Openwrt
 
+感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的仓库
+
 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的云编译项目
 
 感谢[pidge](https://www.right.com.cn/FORUM/space-uid-221258.html) 发布的 [分享小米R4A千兆版编译OPENWRT(Breed直刷版)](https://www.right.com.cn/FORUM/thread-4052254-1-1.html) 的文章
