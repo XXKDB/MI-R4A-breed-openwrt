@@ -27,6 +27,15 @@ sed -i "s/Xiaomi Mi Router 4A Gigabit Edition/星新课代表制作出品/g" tar
 
 sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
 
+# 状态系统增加个性信息
+sed -i "s/exit 0//" package/lean/default-settings/files/zzz-default-settings
+echo 'sed -i "/CPU usage/a\<tr><td width="33%">关于</td><td><a class="author-blog" href="https://myxiaochuang.gitee.io">作者博客</a>&nbsp;&nbsp;&nbsp;<a class="author-blog" href="https://space.bilibili.com/359789531">哔哩哔哩</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
+echo 'sed -i "/作者博客/a\<tr><td width="33%">编译源地址</td><td><a class="author-blog" href="https://github.com/YL2209/MI-R4A-breed-openwrt">编译源地址</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
+echo 'sed -i "/编译源地址/a\<tr><td width="33%">表情包</td><td><img class="emoji-icon" src="https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/img/beian2.gif"></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
+echo "" >> package/lean/default-settings/files/zzz-default-settings
+echo "" >> package/lean/default-settings/files/zzz-default-settings
+echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
+
 #删除原默认主题
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-theme-bootstrap
