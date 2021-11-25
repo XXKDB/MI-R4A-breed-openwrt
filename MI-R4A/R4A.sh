@@ -17,22 +17,20 @@
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把YOU-R4A修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='MIWIFI'' package/lean/default-settings/files/zzz-default-settings
+sed -i '/uci commit system/i\uci set system.@system[0].hostname='R4A-G'' package/lean/default-settings/files/zzz-default-settings
 
-# 版本号里显示一个自己的名字（ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
-# sed -i "s/OpenWrt /星新课代表/g" package/lean/default-settings/files/zzz-default-settings
 # 版本号里显示一个自己的名字（ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
 sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ 星新课代表 /g' package/lean/default-settings/files/zzz-default-settings
 
 #更改主机型号，支持中文。 
-sed -i "s/Xiaomi Mi Router 4A Gigabit Edition/小米4A千兆版/g" target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts
+sed -i "s/Xiaomi Mi Router 4A Gigabit Edition/小米4A千兆版路由/g" target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts
 
 sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
 
 # 状态系统增加个性信息
 sed -i "s/exit 0//" package/lean/default-settings/files/zzz-default-settings
 echo 'sed -i "/CPU usage/a\<tr><td width="33%">关于</td><td><a class="author-blog" href="https://myxiaochuang.gitee.io">作者博客</a>&nbsp;&nbsp;&nbsp;<a class="author-blog" href="https://space.bilibili.com/359789531">哔哩哔哩</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
-echo 'sed -i "/作者博客/a\<tr><td width="33%">编译源地址</td><td><a class="author-blog" href="https://github.com/YL2209/MI-R4A-breed-openwrt">编译源地址</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
+echo 'sed -i "/作者博客/a\<tr><td width="33%">编译源地址</td><td><a class="author-blog" href="https://github.com/XXKDB/MI-R4A-breed-openwrt">编译源地址</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
 echo 'sed -i "/编译源地址/a\<tr><td width="33%">表情包</td><td><img class="emoji-icon" src="https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/img/beian2.gif"></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
