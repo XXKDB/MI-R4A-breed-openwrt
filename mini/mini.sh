@@ -18,14 +18,14 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='MI-mini'' package/lean/default-settings/files/zzz-default-settings
 
 # 版本号里显示一个自己的名字（ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
-#sed -i "s/OpenWrt /ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ 星新课代表 /g" package/lean/default-settings/files/zzz-default-settings
+
 #更改主机型号，支持中文。 
 sed -i "s/Xiaomi MiWiFi Mini/小米mini路由/g" target/linux/ramips/dts/mt7620a_xiaomi_miwifi-mini.dts
 
 sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
 
-# 状态系统增加个性信息
+# 状态-系统 增加个性信息
 sed -i "s/exit 0//" package/lean/default-settings/files/zzz-default-settings
 echo 'sed -i "/CPU usage/a\<tr><td width="33%">关于</td><td><a class="author-blog" href="https://myxiaochuang.gitee.io">作者博客</a>&nbsp;&nbsp;&nbsp;<a class="author-blog" href="https://space.bilibili.com/359789531">哔哩哔哩</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
 echo 'sed -i "/作者博客/a\<tr><td width="33%">编译源地址</td><td><a class="author-blog" href="https://github.com/XXKDB/MI-R4A-breed-openwrt">编译源地址</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
@@ -125,7 +125,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-turboacc/po/zh-cn/turboacc.po
 
 # 修改默认wifi名称ssid为XXKDB
-sed -i 's/ssid=OpenWrt/ssid=XXKDB/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/ssid=OpenWrt/ssid=MIWIFI_2021/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改默认wifi密码key为password
 sed -i 's/encryption=none/encryption=psk2/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
