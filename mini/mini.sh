@@ -107,7 +107,8 @@ sed -i 's/#5e72e4/#331E4F/g' package/lean/luci-theme-argon_armygreen/htdocs/luci
 #sed -i 's#https://github.com/openwrt/luci#https://jq.qq.com/?_wv=1027&k=s7GHUQ4e#g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/footer.htm
 #主机名右上角符号❤
 #sed -i 's/❤/👽/g' package/lean/luci-theme-argon_armygreen/luasrc/view/themes/argon_armygreen/header.htm
-
+#修改符号
+sed -i 's/content:"®"/content:"☭"/g' package/lean/luci-theme-ifit/files/htdocs/css/style.css
 
 
 #取消原主题luci-theme-bootstrap为默认主题
