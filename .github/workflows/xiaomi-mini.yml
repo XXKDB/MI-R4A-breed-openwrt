@@ -24,8 +24,9 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: mini/MINI.conf.default
   CONFIG_FILE: mini/mini.config
-  DIY_P1_SH: diy-part1.sh
+  DIY_P1_SH: mini/diy-part1.sh
   DIY_P2_SH: mini/mini.sh
+  DIY_P3_SH: mini/R4A-Pro/diy-part3.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
@@ -82,14 +83,10 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-    - name: Mv favicon.ico
+    - name: 上传 文件
       run: |
-        mv mini/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico
-        mv mini/logo.png openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/logo.png
-        mv mini/bg1.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg1.jpg
-        mv mini/bg2.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg2.jpg
-        mv mini/bg3.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg3.jpg
-        mv mini/banner openwrt/package/base-files/files/etc/banner
+        chmod +x $DIY_P3_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
         
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
