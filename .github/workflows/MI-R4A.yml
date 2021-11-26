@@ -24,8 +24,9 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: MI-R4A/R4A.conf.default
   CONFIG_FILE: MI-R4A/R4A.config
-  DIY_P1_SH: diy-part1.sh
+  DIY_P1_SH: MI-R4A/diy-part1.sh
   DIY_P2_SH: MI-R4A/R4A.sh
+  DIY_P3_SH: MI-R4A/diy-part3.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
@@ -82,10 +83,10 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
-    - name: Update favicon.ico
+    - name: 上传 文件
       run: |
-        mv MI-R4A/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico  
-        mv MI-R4A/banner openwrt/package/base-files/files/etc/banner
+        chmod +x $DIY_P3_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
         
     - name: SSH connection to Actions  
       uses: P3TERX/ssh2actions@v1.0.0
