@@ -26,6 +26,7 @@ env:
   CONFIG_FILE: Redmi-AX6/.config
   DIY_P1_SH: Redmi-AX6/diy-part1.sh
   DIY_P2_SH: Redmi-AX6/diy-part2.sh
+  DIY_P3_SH: Redmi-AX6/diy-part3.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
@@ -82,18 +83,10 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
-    - name: 上传 favicon.ico
+    - name: 上传 文件
       run: |
-        mv Redmi-AX6/bg/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico
-        mv Redmi-AX6/bg/logo.png openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/logo.png
-        mv Redmi-AX6/bg/bg1.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg1.jpg
-        mv Redmi-AX6/bg/bg2.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg2.jpg
-        mv Redmi-AX6/bg/bg3.jpg openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/img/bg3.jpg
-        mv Redmi-AX6/favicon.ico openwrt/feeds/kenzo/luci-theme-ifit/files/htdocs/favicon.ico
-        mv Redmi-AX6/logo.png openwrt/feeds/kenzo/luci-theme-ifit/files/htdocs/logo.png      
-        mv Redmi-AX6/bg/main_bg.jpg openwrt/feeds/kenzo/luci-theme-ifit/files/htdocs/images/main_bg.jpg
-        mv Redmi-AX6/bg/main_bg_5k.jpg openwrt/feeds/kenzo/luci-theme-ifit/files/htdocs/images/main_bg_5k.jpg
-        mv Redmi-AX6/banner openwrt/package/base-files/files/etc/banner
+        chmod +x $DIY_P3_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
         
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
