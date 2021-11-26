@@ -27,12 +27,20 @@ sed -i "s/Xiaomi Mi Router CR660x/小米CR660X路由/g" target/linux/ramips/dts/
 
 # 状态系统增加个性信息
 sed -i "s/exit 0//" package/lean/default-settings/files/zzz-default-settings
-echo 'sed -i "/CPU usage/a\<tr><td width="33%">关于</td><td><a class="author-blog" href="https://myxiaochuang.gitee.io">作者博客</a>&nbsp;&nbsp;&nbsp;<a class="author-blog" href="https://space.bilibili.com/359789531">哔哩哔哩</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
-echo 'sed -i "/作者博客/a\<tr><td width="33%">编译源地址</td><td><a class="author-blog" href="https://github.com/XXKDB/MI-R4A-breed-openwrt">编译源地址</a></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
-echo 'sed -i "/编译源地址/a\<tr><td width="33%">表情包</td><td><img class="emoji-icon" src="https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/img/beian2.gif"></td></tr>" /usr/lib/lua/luci/view/admin_status/index.htm' >> package/lean/default-settings/files/zzz-default-settings
+
+echo "sed -i '/CPU usage/a\<tr><td width=\"33%\">关于</td><td><a class=\"author-blog\" href=\"https://myxiaochuang.gitee.io\">作者博客</a>&nbsp;&nbsp;&nbsp;<a class=\"author-blog\" href=\"https://github.com/XXKDB/MI-R4A-breed-openwrt\">编译源地址</a>&nbsp;&nbsp;&nbsp;<a class=\"author-blog\" href=\"https://space.bilibili.com/359789531\">哔哩哔哩</a></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+echo "sed -i '/关于/a\<tr><td width=\"33%\">天气</td><td><iframe scrolling=\"no\" src=\"https://tianqiapi.com/api.php?style=tm\&color=ff5200\&skin=gif\" frameborder=\"0\" width=\"270\" height=\"20\" allowtransparency=\"true\"></iframe></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+echo "sed -i '/天气/a\<tr><td width=\"33%\"> </td><td class=\"container\" style=\"height:200px;\"><canvas class=\"illo\" width=\"640\" height=\"640\" style=\"max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;\"></canvas></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+
+echo "echo '<script src=\"https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/js/twopeople1.js\"></script>' >> /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+echo "echo '<script src=\"https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/js/zdog.dist.js\"></script>' >> /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+echo "echo '<script id=\"rendered-js\" src=\"https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/js/pen.js\"></script>' >> /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+echo "echo '<script src=\"https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/js/ginkgo-leaf.js\"></script>' >> /usr/lib/lua/luci/view/footer.htm" >> package/lean/default-settings/files/zzz-default-settings
+
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 echo "" >> package/lean/default-settings/files/zzz-default-settings
 echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
+
 
 #删除原默认主题
 rm -rf package/lean/luci-theme-argon
@@ -124,8 +132,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon_armygreen/g' ./feeds/luci/collec
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 # 修改想要的root密码
 #sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:你的密码/g' package/lean/default-settings/files/zzz-default-settings
+
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
-sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-flowoffload/po/zh-cn/flowoffload.po
+sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-turboacc/po/zh-cn/turboacc.po
 
 # 修改默认wifi名称ssid为Xiaomi_R4A
 sed -i 's/ssid=OpenWrt/ssid=MIWIFI_2021/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
@@ -133,5 +142,4 @@ sed -i 's/ssid=OpenWrt/ssid=MIWIFI_2021/g' package/kernel/mac80211/files/lib/wif
 # 修改默认wifi密码key为Xiaomi_R4A
 sed -i 's/encryption=none/encryption=psk2/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #使用sed 在第四行后添加新字
-#sed -e 120a\set wireless.default_radio${devidx}.key=XXKDB-R4A package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i '/set wireless.default_radio${devidx}.encryption=psk2/a\set wireless.default_radio${devidx}.key=password' package/kernel/mac80211/files/lib/wifi/mac80211.sh
