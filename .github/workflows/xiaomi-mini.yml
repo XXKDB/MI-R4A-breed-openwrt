@@ -26,7 +26,7 @@ env:
   CONFIG_FILE: mini/mini.config
   DIY_P1_SH: mini/diy-part1.sh
   DIY_P2_SH: mini/mini.sh
-  DIY_P3_SH: mini/R4A-Pro/diy-part3.sh
+  DIY_P3_SH: mini/diy-part3.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
